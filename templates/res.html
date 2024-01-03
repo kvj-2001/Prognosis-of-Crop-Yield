@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500&display=swap" rel="stylesheet">
+    
+    <title>PROGNOSIS</title>
+    <style>
+        body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', cursive;
+}
+header{
+    display:flex;
+    background-color: black;;
+    justify-content:space-between;
+    margin-top:0px;
+    position: fixed;
+    width:100vw;
+    padding:10px 150px;
+    box-sizing: border-box;
+}
+header div{
+    display:flex;
+    width:180px;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color:white;
+    font-size:18px;
+    letter-spacing: 3px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+a:hover{
+    background: linear-gradient(to right, rgb(14, 126, 239), rgb(105, 185, 239));
+    border-radius: 5px;
+}
+#title{
+    font-family: 'Fugaz One', cursive;
+    font-size: 25px;
+}
+.result{
+    background: linear-gradient(to bottom left, rgb(249, 255, 224), rgb(253, 209, 209));
+    display:grid;
+    place-content: center;
+}
+    </style>
+    </head>
+    <body>
+        <header>
+            <a id="title" href="#home">PROGNOSIS</a>
+            <div>
+                <a href="#home">HOME</a>
+                <a href="#yeild">YEILD</a>
+            </div>
+        </header>
+        <div class='result'>
+            <span style="color:red; font-size: 30px;">The Crop can be yielded upto {{result}} hg/ha</span>
+        </div>
+    </body>
+    </html>

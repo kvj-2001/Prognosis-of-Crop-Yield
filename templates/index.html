@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;500&display=swap" rel="stylesheet">
+    
+    <title>PROGNOSIS</title>
+    <style>
+        body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Alkatra', cursive;
+}
+header{
+    display:flex;
+    background-color: black;;
+    justify-content:space-between;
+    margin-top:0px;
+    position: fixed;
+    width:100vw;
+    padding:10px 150px;
+    box-sizing: border-box;
+}
+header div{
+    display:flex;
+    width:180px;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color:white;
+    font-size:18px;
+    letter-spacing: 3px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+a:hover{
+    background: linear-gradient(to right, rgb(14, 126, 239), rgb(105, 185, 239));
+    border-radius: 5px;
+}
+#title{
+    font-family: 'Fugaz One', cursive;
+    font-size: 25px;
+}
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+/* HOME section */
+#home{
+    display:flex;
+    justify-content:space-between;
+    padding: 100px 150px;
+    box-sizing: border-box;
+    background-image: url('bg3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    place-content: center;
+    padding-top: 200px;
+}
+#home div{
+    width:60%;
+    display:grid;
+    place-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    padding:20px;
+    box-sizing: border-box;
+    height: 400px;
+    place-items: center;
+}
+h1{
+    font-size:60px;
+    color:navy;
+    text-align: center;
+}
+#home p{
+    font-size:20px;
+    height:fit-content;
+    padding:10px;
+    text-align: center;
+}
+#home img{
+    width:450px;
+    height:350px;
+    justify-self: center;
+}
+
+/* Crop Prediction Section */
+#yeild{
+    background: linear-gradient(to bottom left, rgb(249, 255, 224), rgb(253, 209, 209));
+    display:grid;
+    place-content: center;
+}
+form{
+    display:grid;
+    place-items:center;
+    width:500px;
+    height:fit-content;
+    background-color:rgb(255, 255, 255,0.3);
+    backdrop-filter: blur(10px);
+    padding:20px 10px;
+    box-sizing: border-box;
+}
+form div{
+    margin:10px 0;
+    width:350px;
+    height:30px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+form input{
+    width:180px;
+    height:30px;
+    padding-left:10px;
+    box-sizing: border-box;
+}
+#crops{
+    width:180px;
+    height:30px;
+}
+input[type=submit]{
+    width:120px;
+    border-radius:20px;
+    border:0;
+    background: linear-gradient(to right, rgb(14, 126, 239), rgb(105, 185, 239));
+    color:white;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-top:10px;
+}
+@media (max-width:800px){
+    #home{
+        flex-direction: column;
+        height:fit-content;
+    }
+    #home div{
+        width:100%;
+        margin-bottom:30px;
+    }
+    #home p, h1{
+        text-align: center;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <a id="title" href="#home">PROGNOSIS</a>
+        <div>
+            <a href="#home">HOME</a>
+            <a href="#yeild">YEILD</a>
+        </div>
+    </header>
+    
+    <main>
+        <section id="home">
+            <div>
+                <h1> Prognosis of Crop Yield</h1>
+                <p>A Platform that helps the farmer in all aspects like prediction of yiled, fertilizer, crop type using the Machine Learning Techniques.</p>
+            </div>
+            <!--<div>
+                <img src="img.jpg" alt="Image containing graphs or predictions">
+                Include in=mage showing the crop yeold before using and after using the app 
+                <p>The system aims to help farmers to cultivate proper crop for better yield production. To
+                be precise and accurate in predicting crops, the project analyze the nutrients present in
+                the soil and the crop productivity based on location.</p>
+            </div>-->
+        </section>
+        <section id="yeild">
+            <form action="/prognosis" method="post">
+                <h3>PROGNOSIS Crop Yeild Predictor</h3>
+                <div>
+                    <p>Choose a Crop</p>
+                    <select name="crop" id="crops">
+                        <option value="Select">Select</option>
+                        <option value="7">Cassava</option>
+                        <option value="1">Maize</option>
+                        <option value="2">Potatoes</option>
+                        <option value="3">Rice, paddy</option>
+                        <option value="4">Sorghum</option>
+                        <option value="5">Soyabeams</option>
+                        <option value="8">Sweet potatoes</option>
+                        <option value="6">Wheat</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Nitrogen %</p>
+                    <input type="number" name="nitrogen%" placeholder="In Percentage" id="">
+                </div>
+                <div>
+                    <p>Nitrogen (Pounds/Acre)</p>
+                    <input type="number" name="nitrogen_pa" placeholder="In Millimeters" id="">
+                </div>
+                <div>
+                    <p>potassium %</p>
+                    <input type="number" name="pottasium%" placeholder="In Percentage" id="">
+                </div>
+                <div>
+                    <p>Pottasium (Pounds/Acre)</p></p>
+                    <input type="number" name="pottasium_pa" placeholder="In Millimeters" id="">
+                </div>
+                <div>
+                    <p>Potash %</p>
+                    <input type="number" name="potash%" placeholder="In Percentage" id="">
+                </div>                
+                <div>
+                    <p>Potash (Pounds/Acre)</p>
+                    <input type="number" name="potash_pa" placeholder="In Millimeters" id="">
+                </div>
+                <div>
+                    <p>Average Rainfall</p>
+                    <input type="number" name="rain" placeholder="In Millimeters" id="">
+                </div>
+                <div>
+                    <p>Average Temparature</p>
+                    <input type="number" name="temp" placeholder="In Centigrades" id="">
+                </div>
+                <input type="submit" value="Predict">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
